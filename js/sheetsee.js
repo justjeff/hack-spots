@@ -290,6 +290,7 @@ L.tileLayer(tiles, {attribution: attribution}).addTo(map)
   addMarkerLayer(map, mapOptions)
 }
 
+
 function makePopupTemplate (geoJSON) {
   var allOptions = geoJSON[0].opts
   var keys = []

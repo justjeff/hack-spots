@@ -1,4 +1,83 @@
-/* General */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: darkblue;
+  color: white;
+  font-size: 16px; 
+  border: 0; 
+  margin: 0; 
+  padding: 0;
+}
+
+/* Containers */
+html, body, #map {
+   height: calc(100vh - 5vh); 
+   width: 100vw;
+   max-width: 100%;
+   max-height: calc(100% - 5vh);
+  }
+footer {
+    max-height: 3vh;
+    padding: 1em;
+  }
+
+
+h1 {font-size: 80px; font-weight: normal; margin: 0px;}
+h2 {font-size: 50px; font-weight: normal; margin: 11px 0px;}
+h3 {font-size: 30px; margin: 10px 0px;}
+h4 {font-size: 24px;}
+
+img {width: 100%;} 
+p a, a {color: white; text-decoration: none; padding-bottom: 0px; border-bottom: 1px #2db3e7 solid;}
+a:hover {color: #47CCFC;}
+small {padding: 10px 0px; font-size: 10px;}
+p {margin: 0px; padding: 0px; font-size: 12px;}
+li {line-height: 19px; font-size: 12px;}
+ol {line-height: 24px;}
+a.button {border: none;}
+
+
+
+ul.nav {list-style: none; margin: 0px; padding: 0px;}
+ul.nav li {display: inline; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding-right: 4px;}
+ul.nav li a {border: none;}
+ul.nav li a:hover {border-bottom: 1px #FD9393 solid;}
+
+.button {padding: 5px 5px; background-color: #BEBEBE; font-size: 10px; color: #fff;}
+.button:hover {background: #B9FCFC; color: #47CCFC;}
+.fauxButton {padding: 5px 5px; background-color: #FF4646; font-size: 11px; color: #fff; display: inline;}
+.fauxButton .selected {background-color: #FF4646;}
+.colorText {color: #FF4646; text-transform: uppercase; font-weight: 700;}
+
+/* MAP */
+  .leaflet-popup-content h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .leaflet-popup-content {font-family: Lato;}
+
+
+#rightSide {height: 400px; max-width: 350px; width: 100%; float: right; padding-top: 5px;}
+#selectedSpot {display: none;}
+#latestSpot ul, #selectedSpot ul {list-style: none; margin-top: 12px 0px; padding: 0px;}
+.category {text-transform: uppercase; font-size: 9px; letter-spacing: .2em; padding-right: 6px;}
+
+#info p {font-size: 14px; padding: 4px; line-height: 19px; font-weight: 300;}
+#info {border-top: 4px #F8F8F8 solid;}
+
+
+/* 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 1024px) {
+  body {border: 20px #F8F8F8 solid; margin: 0px; padding: 20px 20px 80px 20px;}
+  #tableFilter, .clear, .resetMap {display: none;}
+  #wrapper {max-width: 460px; padding-top: 20px;}
+  #hackSpotsTable, #map {min-width: 224px;}
+}
+*/
 
 /*  body {margin: 0px auto;}
   a {color: #333;}
@@ -8,46 +87,3 @@
   .button:hover {cursor: hand;}
   input:focus {outline: none;}
 
-/* Table */
-
-  table {text-align: left; width: 100%}
-  th {padding: 10px 0px;}
-  td, text {padding: 3px 0 3px 0; font-size: 14px;}
-  #tableFilter {margin: 12px 0px; border: none; border-bottom: 1px solid #333; background-color: transparent; padding: 0px; font-family: Merriweather; color: #fff; font-size: 13px; height: 22px;}
-  .noMatches {margin-left: 20px; font-size: 11px; font-style: italic; visibility: hidden;}
-
-/* Containers */
-  .container {margin: 14px 0px;}
-  #map {height: 500px; width: 100%; background: #DADADA;}
-  #holder {height: 400px; max-width: 600px; background: #FFE4E4;}
-  #bar2 {height: 320px; max-width: 600px; background: #F8CDCD;}
-
-/* Bar Chart */
-
-  .labels text {text-align: right;}
-  .bar .labels text {fill: #333;}
-  .bar rect {fill: #e6e6e6;}
-  .axis {shape-rendering: crispEdges;}
-  .x.axis line {stroke: #FFE4E4; /*stroke-opacity: .2;*/ fill: none;}
-  .x.axis path {fill: none;}
-  .x.axis text {fill: #333;}
-  .xLabel {font-family: sans-serif; font-size: 9px;}
-
-/* Line Chart */
-
-/*  .axis {shape-rendering: crispEdges;}
-  .x.axis .minor, .y.axis .minor {stroke-opacity: .5;}
-  .x.axis {stroke-opacity: 1;}*/
-/*  .y.axis line, .y.axis path, .x.axis path {fill: none; stroke: #acacac; stroke-width: 1;}
-  .x.axis line {stroke: #acacac; stroke-opacity: .75;}*/
-/*  .bigg {-webkit-transition: all .2s ease-in-out; -webkit-transform: scale(2);}
-  path.chartLine {stroke: #14ECC8; stroke-width: 3; fill: none;}*/
-  div.tooltip {position: absolute; text-align: left; padding: 4px 8px; width: auto; font-size: 10px; height: auto; background: #fff; border: 0px; pointer-events: none;}
-  /*circle {fill: #fff;}*/
-
-/* Map */
-
-  .leaflet-popup-content {font-family: Lato;}
-  .leaflet-popup-content h2 {margin-bottom: 4px;}
-
-  img.petThumbs {height: 80px; width: 80px; border-radius: 1000px;}

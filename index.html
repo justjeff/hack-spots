@@ -5,24 +5,26 @@
     <meta charset='utf-8'>
     <title>SSR Partner Schools</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic|Source+Code+Pro:400'
+    <link href='http://fonts.googleapis.com/css?family=Lato'
         rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="./favicon.png">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <script type='text/javascript' src='./js/sheetsee.js'></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel='stylesheet' type='text/css' href='./css/site.css'>
 </head>
 <body>
     <div class="container">
         <div id="map">Loading...</div>
-        <p><em>This map is built upon a Google <a href="https://docs.google.com/spreadsheets/d/1vKnhsjDpULudiTg2AU6MdZV2nRcOyct6mqo4cQhlVKY">Spreadsheet</a>. // How cool is that?</em></p>
+        
 
-                <footer>
 
-                </footer>
     </div>
+    <footer>
+        <p>This map is built upon a Google <a
+                    href="https://docs.google.com/spreadsheets/d/1vKnhsjDpULudiTg2AU6MdZV2nRcOyct6mqo4cQhlVKY">Spreadsheet</a>.
+                &mdash; How cool is that?</p>
+    </footer>
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
@@ -46,22 +48,6 @@
         }
     </script>
 
-    <script id="fullTable_template" type="text/html">
-        <table>
-            <tr><th class="tHeader">City</th><th class="tHeader">Name</th><th class="tHeader">Website</th></tr>
-                {{#rows}}
-                <tr><td>{{City}}</td><td>{{name}}</td><td>{{webURL}}</td></tr>
-                {{/rows}}
-            </table>
-    </script>
-
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            var URL = "0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc"
-            Tabletop.init({ key: URL, callback: showInfo, simpleSheet: true })
-        })
-
-    </script>
 </body>
 
 </html>
